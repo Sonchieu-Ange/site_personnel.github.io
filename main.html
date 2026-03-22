@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonchieu Ange - Portfolio</title>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Open Sans', sans-serif;}
+
+body{
+  background: linear-gradient(135deg, #000000 0%, #008080 50%, #00CED1 100%);
+  color:#FFFFFF;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+  font-family:'Roboto', sans-serif;
+}
+
+nav a{
+  color:#FFFFFF;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#3b82f6;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:3rem;
+  font-family:'Hello Paris', serif;
+}
+
+.photo-wrapper{
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 165, 0, 0.9);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  margin-top: 40px;
+}
+
+.photo-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero span{
+  color:#FFA500;
+}
+
+.hero p{
+  margin:20px 0;
+  opacity:.7;
+}
+
+.btn{
+  padding:10px 25px;
+  border:none;
+  background:#FFA500;
+  color:#FFFFFF;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:#3b82f6;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.hero{
+  padding-bottom: 40px;
+}
+
+section#about{
+  margin-top: 20px;
+}
+
+h2{
+  margin-bottom:30px;
+  text-align:center;
+  font-family:serif;
+  font-size:2rem;
+}
+
+.about{
+  text-align:justify;
+  font-family:'Open Sans', sans-serif;
+  font-size:1.05rem;
+  line-height:1.7;
+  max-width:900px;
+  margin:0 auto;
+  letter-spacing:0.01em;
+  opacity:0.95;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(17,17,17,0.6);
+  padding:28px;
+  border-radius:12px;
+  transition:.4s ease;
+  border:1px solid rgba(58, 130, 245, 0.3);
+  backdrop-filter:blur(5px);
+  display:flex;
+  flex-direction:column;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  background:rgba(26,26,26,0.8);
+  border:1px solid #FFA500;
+  box-shadow:0 15px 35px rgba(255, 165, 0, 0.15);
+}
+
+.card h3{
+  font-family:'Roboto', sans-serif;
+  font-size:1.3rem;
+  font-weight:700;
+  color:#FFA500;
+  margin-bottom:12px;
+  line-height:1.4;
+}
+
+.card p{
+  font-family:'Open Sans', sans-serif;
+  font-size:0.95rem;
+  line-height:1.65;
+  color:#E0E0E0;
+  text-align:justify;
+  letter-spacing:0.005em;
+  flex-grow:1;
+}
+
+.badge{
+  display:inline-block;
+  background:#FFA500;
+  color:#000000;
+  font-size:0.75rem;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:20px;
+  margin-top:12px;
+  width:fit-content;
+  font-family:'Roboto', sans-serif;
+}
+
+/* CONTACT */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input,textarea{
+  padding:12px;
+  border:none;
+  border-radius:5px;
+  background:#111;
+  color:#FFFFFF;
+}
+
+input::placeholder, textarea::placeholder{
+  color:#FFFFFF;
+  opacity:0.7;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.6;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero h1{font-size:2rem;}
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <div>LOGO</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1 data-aos="fade-up">Hi, I'm <span>Sonchieu Ange</span></h1>
+  <p data-aos="fade-up" data-aos-delay="200">Ingénieur Réseaux-Télécoms & Créatrice de contenu vidéo</p>
+  <a href="#projects">
+    <button class="btn" data-aos="fade-up" data-aos-delay="400">View Work</button>
+  </a>
+
+  <div class="photo-wrapper" data-aos="fade-up">
+    <img src="photo.png" alt="Profile Picture">
+  </div>
+</section>
+
+<section id="about">
+  <h2 data-aos="fade-up">About Me</h2>
+  <p class="about" data-aos="fade-up">
+    Je suis ingénieure en réseaux et télécommunications, passionnée par la création de solutions à la fois techniques et opérationnelles. Je conçois des infrastructures réseaux fiables, sécurisées et performantes, capables de répondre aux exigences des environnements modernes.
+
+En parallèle, je mets ma créativité au service de la production de contenus vidéos impactants, pensés pour éduquer, raconter une histoire et valoriser mon expertise et mes compétences.
+
+À la croisée de la technologie et de la créativité, j’accompagne particuliers et entreprises dans la mise en place de systèmes solides tout en renforçant leur présence visuelle avec des contenus engageants et professionnels.
+  </p>
+</section>
+
+<section id="projects">
+  <h2 data-aos="fade-up">Projects</h2>
+
+  <div class="projects">
+    <div class="card" data-aos="fade-up">
+      <h3>Sécurisation du réseau</h3>
+      <p>Mise en place d'une infrastructure de supervision et de détection d'intrusion au sein du réseau de l'IUT de Ngaoundéré. Déploiement de <strong>Wazuh</strong> pour la surveillance des événements de sécurité et intégration de <strong>Suricata</strong> comme IDS afin d'identifier et analyser les menaces en temps réel. Ce projet a permis d'améliorer la visibilité, la détection proactive et la réponse aux incidents de sécurité.</p>
+      <span class="badge">✓ Complété</span>
+    </div>
+
+
+<div class="card" data-aos="fade-up" data-aos-delay="100">
+  <h3>Outil d'OSINT</h3>
+  <p>Conception et développement d'un outil dédié à la collecte, l'analyse et la centralisation d'informations issues de sources ouvertes (<strong>OSINT</strong>). L'objectif est de faciliter les investigations, automatiser certaines tâches de recherche et fournir une interface simple et efficace pour les utilisateurs. Le projet est actuellement en phase de développement et d'optimisation.</p>
+  <span class="badge" style="background:#3b82f6; color:#FFFFFF;">⧖ En cours</span>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="200">
+  <h3>Création de contenu vidéo</h3>
+   <p>Gestion d'une chaîne <strong>YouTube</strong> dédiée à la création de contenus vidéo, incluant le montage vidéo, l'intelligence artificielle, l'IT support, les réseaux et télécommunications. Ces vidéos sont à but éducatif et destinées à un public varié, visant à vulgariser des concepts techniques complexes, partager des astuces et des bonnes pratiques, et renforcer ma présence en ligne en tant qu'experte.</p>
+  <span class="badge">▶ En production</span>
+</div>
+
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 data-aos="fade-up">Contact</h2>
+
+  <form id="form">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message"></textarea>
+    <button class="btn">Send</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Portfolio
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+AOS.init();
+
+// Configuration EmailJS - Remplace les valeurs par tes IDs depuis emailjs.com
+const PUBLIC_KEY = "Y1kLeaj168ySx8gFQ"; // depuis Dashboard > Account
+const SERVICE_ID = "service_r0kjan4"; // ID du service (ex: 'gmail')
+const TEMPLATE_ID = "template_bxyh5wp"; // ID du template
+
+// Initialise EmailJS seulement si les clés sont configurées
+if (PUBLIC_KEY !== "YOUR_PUBLIC_KEY" && SERVICE_ID !== "YOUR_SERVICE_ID" && TEMPLATE_ID !== "YOUR_TEMPLATE_ID") {
+  emailjs.init(PUBLIC_KEY);
+
+  document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Envoi du formulaire via EmailJS
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+      .then(function() {
+        alert('Message envoyé avec succès !');
+        document.getElementById("form").reset(); // Vide le formulaire après envoi
+      }, function(error) {
+        alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
+      });
+  });
+} else {
+  // Fallback si EmailJS n'est pas configuré
+  document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("EmailJS n'est pas encore configuré. Remplace les YOUR_* par tes vraies valeurs.");
+  });
+}
+</script>
+
+</body>
+</html>
+
+
